@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="620.0" prefWidth="720.0" style="-fx-background-color: #29293d;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.knowledge_basejavafx.Scene1Controller">
+   <children>
+      <Label layoutX="175.0" layoutY="96.0" prefHeight="38.0" prefWidth="370.0" text="Knowledge_Base_Editor" textFill="WHITE">
+         <font>
+            <Font name="Consolas Bold" size="31.0" />
+         </font>
+      </Label>
+      <Button fx:id="switchBtn" layoutX="290.0" layoutY="480.0" mnemonicParsing="false" onAction="#switchToScene2" prefHeight="48.0" prefWidth="134.0" style="-fx-background-color: #ff5500; -fx-background-radius: 8px;" text="Start" textFill="WHITE">
+         <font>
+            <Font name="Consolas" size="22.0" />
+         </font></Button>
+      <Label layoutX="229.0" layoutY="148.0" prefHeight="38.0" prefWidth="269.0" text="By Pimthai_maidai.com" textFill="WHITE">
+         <font>
+            <Font name="Consolas" size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameTextfield" layoutX="285.0" layoutY="424.0" prefHeight="26.0" prefWidth="157.0" />
+      <Label layoutX="169.0" layoutY="424.0" prefHeight="26.0" prefWidth="120.0" text="Your name:" textFill="WHITE">
+         <font>
+            <Font name="Consolas" size="21.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="202.0" fitWidth="370.0" layoutX="172.0" layoutY="194.0">
+         <image>
+            <Image url="@../../../../../../../../../Users/NITRO/Pictures/ai.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="743.0" prefWidth="1358.0" style="-fx-background-color: #29293d;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.knowledge_basejavafx.Scene2Controller">
+   <children>
+    <AnchorPane layoutX="27.0" layoutY="40.0" minHeight="0.0" minWidth="0.0" prefHeight="163.0" prefWidth="402.0" style="-fx-background-color: #b3b3cc; -fx-background-radius: 6px;">
+         <children>
+            <Label fx:id="nameLabel" layoutX="14.0" layoutY="37.0" prefHeight="26.0" prefWidth="302.0" text="Welcome,">
+               <font>
+                  <Font name="Consolas" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="82.0" prefHeight="18.0" prefWidth="237.0" text="This is Knowledge Base Editor">
+               <font>
+                  <Font name="Consolas" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="107.0" prefHeight="18.0" prefWidth="312.0" text="use for create update and delete rules">
+               <font>
+                  <Font name="Consolas" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="27.0" layoutY="186.0" prefHeight="510.0" prefWidth="402.0" style="-fx-background-color: #5c5c8a; -fx-background-radius: 6px;">
+         <children>
+            <TextField fx:id="resultTxt" layoutX="14.0" layoutY="187.0" prefHeight="26.0" prefWidth="325.0" style="-fx-background-color: white;" />
+            <Button fx:id="updateBtn" layoutX="184.0" layoutY="340.0" mnemonicParsing="false" onAction="#updateRule" prefHeight="40.0" prefWidth="102.0" style="-fx-background-color: #ff5500; -fx-background-radius: 8px;" text="Update Rule" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="clearBtn" layoutX="184.0" layoutY="411.0" mnemonicParsing="false" onAction="#clearRule" prefHeight="40.0" prefWidth="102.0" style="-fx-background-color: #ff5500; -fx-background-radius: 8px;" text="Clear" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="createBtn" layoutX="33.0" layoutY="340.0" mnemonicParsing="false" onAction="#createRule" prefHeight="40.0" prefWidth="101.0" style="-fx-background-color: #ff5500; -fx-background-radius: 8px;" text="Create Rule" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="deleteBtn" layoutX="32.0" layoutY="411.0" mnemonicParsing="false" onAction="#deleteRule" prefHeight="40.0" prefWidth="102.0" style="-fx-background-color: #ff5500; -fx-background-radius: 8px;" text="Delete Rule" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField fx:id="factTxt" layoutX="14.0" layoutY="77.0" prefHeight="26.0" prefWidth="325.0" style="-fx-background-color: white;" />
+            <Text fill="WHITE" layoutX="17.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" if part :">
+               <font>
+                  <Font name="Consolas" size="16.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="17.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" then part :">
+               <font>
+                  <Font name="Consolas" size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="ruleTableView" layoutX="429.0" layoutY="40.0" onMouseClicked="#getData" prefHeight="654.0" prefWidth="897.0" style="-fx-background-color: #e6f3ff; -fx-background-radius: 2px;">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="colFact" minWidth="216.0" prefWidth="400.79998779296875" text="IF PART" />
+            <TableColumn fx:id="colResult" minWidth="198.39996337890625" prefWidth="422.40008544921875" text="THEN  PART" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
